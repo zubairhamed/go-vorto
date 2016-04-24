@@ -16,3 +16,4 @@ infomodel TI_SensorTag_CC2650 {
 		humiditysensor as HumiditySensor "Function block representing the humidity sensor of the device."
 		pressuresensor as PressureSensor "Function block representing the pressure sensor of the device."
 	}
+}
