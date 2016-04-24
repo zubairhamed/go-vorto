@@ -1,0 +1,8 @@
+namespace examples.datatypes.state
+version 1.0.0
+description "Enum for describing the state of a door."
+enum DoorState {
+	open "The door is open.",
+	closed "The door is closed.",
+	undefined "The status is not known."
+}

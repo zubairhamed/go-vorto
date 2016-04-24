@@ -1,0 +1,18 @@
+namespace examples.informationmodels.sensors
+version 1.0.0
+displayname "TI SensorTag CC2650"
+description "Information model for the TI SensorTag CC2650."
+category demo
+using examples.functionblockmodels.sensors.Accelerometer ; 1.0.0
+using examples.functionblockmodels.sensors.TemperatureSensor ; 1.0.0
+using examples.functionblockmodels.sensors.HumiditySensor ; 1.0.0
+using examples.functionblockmodels.sensors.PressureSensor ; 1.0.0
+
+infomodel TI_SensorTag_CC2650 {
+
+	functionblocks {
+		accelerometer as Accelerometer "Function block representing the accelerometer of the device."
+		temperaturesensor as TemperatureSensor "Function block representing the temperature sensor of the device."
+		humiditysensor as HumiditySensor "Function block representing the humidity sensor of the device."
+		pressuresensor as PressureSensor "Function block representing the pressure sensor of the device."
+	}
