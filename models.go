@@ -33,18 +33,30 @@ type DataType struct {
 
 type FunctionBlockModel struct {
 	Name       string
-	Status     []*Status
-	Operations []*Operation
+	Status     []*FunctionBlockStatus
+	Operations []*FunctionBlockOperation
 }
 
-type Status struct {
+type FunctionBlockConfiguration struct {
+/*
+	mandatory blinking as boolean "if the lamp is currently blinking or not"
+	mandatory on as boolean "if the lamp is currently switched on"
+	mandatory powerConsumption as int "the amount of power the lamp is consuming"
+ */
+}
+
+type FunctionBlockFault struct {
+// mandatory bulbDefect as boolean "true if the light bulb of the lamp is defect"
+}
+
+type FunctionBlockStatus struct {
 	Name        string
 	DataType    string
 	Description string
 	Mandatory	bool
 }
 
-type Operation struct {
+type FunctionBlockOperation struct {
 	Name        string
 	DataType    string
 	Description string
