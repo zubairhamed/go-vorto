@@ -57,7 +57,7 @@ func ParseFunctionBlockStatus(lines []string, m *FunctionBlockModel) {
 	lines = lines[1:len(lines)-1]
 
 	for _, line := range lines {
-		s := &Status{}
+		s := &FunctionBlockStatus{}
 
 		s.Description = line[strings.Index(line, "\"")+1: strings.LastIndex(line, "\"")]
 
@@ -80,7 +80,7 @@ func ParseFunctionBlockOperations(lines []string, m *FunctionBlockModel) {
 	lines = lines[1:len(lines)-1]
 
 	for _, line := range lines {
-		s := &Operation{}
+		s := &FunctionBlockOperation{}
 
 		s.Description = line[strings.Index(line, "\"")+1: strings.LastIndex(line, "\"")]
 
