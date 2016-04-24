@@ -6,7 +6,7 @@ import (
 )
 
 func TestParseInfoModel(t *testing.T) {
-	m := ParseFile("./TI_SensorTag_CC2650.infomodel")
+	m := ParseFile("./testresources/TI_SensorTag_CC2650.infomodel")
 
 	assert.Equal(t, "examples.informationmodels.sensors", m.Namespace)
 	assert.Equal(t, "1.0.0", m.Version)
@@ -60,7 +60,7 @@ func TestParseInfoModel(t *testing.T) {
 }
 
 func TestParseFunctionBlock(t *testing.T) {
-	m := ParseFile("./Battery.fbmodel")
+	m := ParseFile("./testresources/Battery.fbmodel")
 
 	assert.Equal(t, "examples.functionblockmodels.metering", m.Namespace)
 	assert.Equal(t, "1.0.0", m.Version)
