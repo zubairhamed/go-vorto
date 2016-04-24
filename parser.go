@@ -89,17 +89,17 @@ func ParseFile(filename string) *VortoModel {
 	for idx, line := range lines {
 		txt := line
 
-		if strings.HasPrefix(txt, "namespace") ||
-		strings.HasPrefix(txt, "version") ||
-		strings.HasPrefix(txt, "displayname") ||
-		strings.HasPrefix(txt, "description") ||
-		strings.HasPrefix(txt, "category") ||
-		strings.HasPrefix(txt, "using") {
-			ParseBuf([]string{txt}, m)
+		if 	strings.HasPrefix(txt, "namespace") ||
+			strings.HasPrefix(txt, "version") ||
+			strings.HasPrefix(txt, "displayname") ||
+			strings.HasPrefix(txt, "description") ||
+			strings.HasPrefix(txt, "category") ||
+			strings.HasPrefix(txt, "using") {
+				ParseBuf([]string{txt}, m)
 		} else {
 			if strings.HasPrefix(txt, "infomodel") ||
 			strings.HasPrefix(txt, "enum") ||
-			strings.HasPrefix(txt, "functionblock") {
+			strings.HasPrefix(txt, "functionblock") && !strings.HasPrefix(txt, "functionblocks") {
 				ParseBuf(lines[idx:len(lines)], m)
 			}
 		}
